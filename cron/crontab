@@ -1,0 +1,2 @@
+*/10 * * * * for i in $(seq 0 999); do (/usr/local/bin/php /var/www/html/script.php -check $((i * 10)) >> /var/www/html/logs/cron.log 2>&1) & done
+*/10 * * * * for i in $(seq 0 999); do (/usr/local/bin/php /var/www/html/script.php -send $((i * 10)) >> /var/www/html/logs/cron.log 2>&1) & done
